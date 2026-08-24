@@ -18,7 +18,7 @@
 <body>
 
     <main>
-        <div class="to-do-conatiner">
+        <div class="to-do-container">
 
             <header>
                 <h1>To Do Avançado</h1>
@@ -32,13 +32,13 @@
                     <input type="text" id="to-do-input" placeholder="O que você vai fazer?">
 
                     <button type="submit">
-                        <i class="fa-thin fa-plus"></i>
+                        <i class="fa-solid fa-plus"></i>
                     </button>
                 </div>
             </form>
 
             <!-- Task Edit Form -->
-            <form class="edit-form">
+            <form id="edit-form" class="edit-form">
 
                 <p>Editar tarefa</p>
 
@@ -49,19 +49,19 @@
                         <i class="fa-solid fa-check-double"></i>
                     </button>
                 </div>
-                <button id="cancel-edit-btn">Cancelar</button>
+                <button type="button" id="cancel-edit-btn">Cancelar</button>
             </form>
 
-            <!-- Task Search Form  -->
+            <!-- Task Search -->
             <div id="tool-bar">
                 <div id="search">
                     <h4>Pesquisar Tarefa</h4>
 
                     <form>
-                        <input type="text" id="serch-input" placeholder="Buscar">
+                        <input type="text" id="search-input" placeholder="Buscar">
 
                         <button id="erase-button">
-                            <i class="fa-solide fa-delete-left"></i>
+                            <i class="fa-solid fa-delete-left"></i>
                         </button>
                     </form>
                 </div>
