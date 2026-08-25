@@ -52,8 +52,9 @@
                 <button type="button" id="cancel-edit-btn">Cancelar</button>
             </form>
 
-            <!-- Task Search -->
+            <!-- Tool Bar -->
             <div id="tool-bar">
+                <!-- Task Search -->
                 <div id="search">
                     <h4>Pesquisar Tarefa</h4>
 
@@ -64,6 +65,53 @@
                             <i class="fa-solid fa-delete-left"></i>
                         </button>
                     </form>
+                </div>
+
+                <!-- Filter -->
+                <div class="filter">
+                    <h4>Filtrar Tarefa:</h4>
+
+                    <select id="filter-select">
+                        <option value="all">Todos</option>
+                        <option value="done">Feitas</option>
+                        <option value="to-do">A fazer</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tasks -->
+            <div id="to-do-list">
+                
+                <div class="to-do">
+                    <h3>Fazendo alguma coisa...</h3>
+
+                    <button class="to-do-finish">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+
+                    <button class="to-do-edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+
+                    <button class="to-do-remove">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="to-do">
+                    <h3>Estudar JavaScript</h3>
+
+                    <button class="to-do-finish">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+
+                    <button class="to-do-edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+
+                    <button class="to-do-remove">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                 </div>
             </div>
         </div>
