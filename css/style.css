@@ -77,3 +77,15 @@ select {
   font-weight: bold;
 }
 
+/* Form Control */
+.form-control {
+  display: flex;
+}
+
+.form-control input {
+  margin-right: 0.5rem;
+}
+
+#cancel-edit-btn {
+  margin-top: 1rem;
+}
