@@ -30,12 +30,32 @@ button {
 button > i {
   color: #102f5e;
   font-weight: bold;
+  pointer-events: none;
 }
 
 button:hover,
 button:hover > i {
   background-color: #102f5e;
   color: #fdfdfd;
+}
+
+input,
+select {
+  padding: 0.25rem 0.5rem;
+}
+
+.hide {
+  display: none;
+}
+
+/* To-do Header */
+.to-do-container {
+  max-width: 450px;
+  width: 100%;
+  margin: 3rem auto;
+  background-color: #fdfdfd;
+  padding: 1.5rem;
+  border-radius: 1rem;
 }
 
 h1 {
