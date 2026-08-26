@@ -58,6 +58,22 @@ select {
   border-radius: 1rem;
 }
 
-h1 {
-  color: blue;
+.to-do-container header {
+  text-align: center;
+  margin: 0 1rem 1rem;
+  border-bottom: 1px solid #ccc;
 }
+
+/* To-do form and Edit-form*/
+#to-do-form,
+#edit-form {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+#to-do-form p,
+#edit-form p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
