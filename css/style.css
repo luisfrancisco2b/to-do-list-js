@@ -17,7 +17,7 @@ body {
 button {
   background-color: #fdfdfd;
   color: #102f5e;
-  border: 1px solid #102f5e;
+  border: 2px solid #102f5e;
   padding: 0.3rem 0.6rem;
   font-size: 1rem;
   cursor: pointer;
@@ -25,6 +25,17 @@ button {
   justify-content: center;
   align-items: center;
   transition: 0.4s;
+}
+
+button > i {
+  color: #102f5e;
+  font-weight: bold;
+}
+
+button:hover,
+button:hover > i {
+  background-color: #102f5e;
+  color: #fdfdfd;
 }
 
 h1 {
