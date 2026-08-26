@@ -7,7 +7,7 @@ An advanced to-do list application built from scratch using **HTML5**, **CSS3**,
 ## Current Progress
 
 - ✅ HTML structure completed
-- ✅ CSS styling completed
+- 🚧 CSS styling completed
 - ✅ Font Awesome icons integrated via CDN
 - 🚧 JavaScript logic in development
 
@@ -29,4 +29,5 @@ Feel free to follow the progress or reach out with suggestions!
 ---
 
 ## 👨‍💻 Author
+
 Luis Francisco
