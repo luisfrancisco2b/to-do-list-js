@@ -132,18 +132,24 @@ select {
 }
 
 #to-do-list {
-  padding: 1rem;
-  margin: 1rem;
   display: flex;
   flex-direction: column;
 }
 
 .to-do {
   display: flex;
-  margin-bottom: 0.8rem;
   justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: 0.3s;
 }
 
 .to-do h3 {
-  margin-right: 0.5rem;
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.to-do button {
+  margin-left: 0.4rem;
 }
