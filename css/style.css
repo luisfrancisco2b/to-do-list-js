@@ -130,3 +130,20 @@ select {
 #filter select {
   flex: 1;
 }
+
+#to-do-list {
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.to-do {
+  display: flex;
+  margin-bottom: 0.8rem;
+  justify-content: space-around;
+}
+
+.to-do h3 {
+  margin-right: 0.5rem;
+}
