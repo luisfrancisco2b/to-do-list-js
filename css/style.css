@@ -89,3 +89,25 @@ select {
 #cancel-edit-btn {
   margin-top: 1rem;
 }
+
+/* Tool Bar */
+#tool-bar {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+  display: flex;
+  /* justify-content: space-around; */
+}
+#tool-bar h4 {
+  margin-bottom: 0.5rem;
+}
+#search {
+  border-right: 1px solid #ccc;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+#erase-button {
+  margin-top: 10px;
+}
