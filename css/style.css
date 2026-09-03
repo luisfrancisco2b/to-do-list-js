@@ -108,6 +108,25 @@ select {
   display: flex;
   flex-direction: column;
 }
+
+#search form {
+  display: flex;
+}
+
+#search input {
+  width: 100%;
+}
+
 #erase-button {
-  margin-top: 10px;
+  margin-left: 0.5rem;
+}
+
+#filter {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+
+#filter select {
+  flex: 1;
 }
