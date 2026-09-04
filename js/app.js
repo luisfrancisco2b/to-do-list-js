@@ -12,3 +12,12 @@ const toDoList = document.querySelector("#to-do-list");
 // Functions
 
 // Events
+toDoForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const toDoInputValue = toDoInput.value;
+
+  if (toDoInputValue) {
+    console.log(toDoInputValue);
+  }
+});
