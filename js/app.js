@@ -11,6 +11,19 @@ const toDoList = document.querySelector("#to-do-list");
 
 // Functions
 
+// Function to save input data
+const saveData = (text) => {
+  const toDo = document.createElement("div");
+  toDo.classList.add("to-do");
+
+  const toDoTitle = document.createElement("h3");
+  toDoTitle.innerText = text;
+
+  toDo.appendChild(toDoTitle);
+
+  console.log(toDo);
+};
+
 // Events
 toDoForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -18,6 +31,6 @@ toDoForm.addEventListener("submit", (e) => {
   const toDoInputValue = toDoInput.value;
 
   if (toDoInputValue) {
-    console.log(toDoInputValue);
+    saveData(toDoInputValue);
   }
 });
