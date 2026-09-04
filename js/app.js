@@ -21,7 +21,20 @@ const saveData = (text) => {
 
   toDo.appendChild(toDoTitle);
 
-  console.log(toDo);
+  const doneBtn = document.createElement("button");
+  doneBtn.classList.add("to-do-finish");
+  doneBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+  toDo.appendChild(doneBtn);
+
+  const editBtn = document.createElement("button");
+  editBtn.classList.add("to-do-edit");
+  editBtn.innerHTML = '<i class="fa-solid fa-pen"></i>';
+  toDo.appendChild(editBtn);
+
+  const removeBtn = document.createElement("button");
+  removeBtn.classList.add("to-do-remove");
+  removeBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+  toDo.appendChild(removeBtn);
 };
 
 // Events
