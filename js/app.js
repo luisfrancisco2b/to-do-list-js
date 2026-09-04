@@ -35,6 +35,11 @@ const saveData = (text) => {
   removeBtn.classList.add("to-do-remove");
   removeBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
   toDo.appendChild(removeBtn);
+
+  toDoList.appendChild(toDo);
+
+  toDoInput.value = "";
+  toDoInput.focus();
 };
 
 // Events
