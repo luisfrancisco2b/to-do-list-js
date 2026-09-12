@@ -59,3 +59,20 @@ toDoForm.addEventListener("submit", (e) => {
     saveData(toDoInputValue);
   }
 });
+
+document.addEventListener("click", (e) => {
+  const targetEl = e.target;
+  const parentEl = targetEl.closest("div");
+
+  if (targetEl.classList.contains("to-do-finish")) {
+    console.log("Clicou em finalizar tarefa!");
+  }
+
+  if (targetEl.classList.contains("to-do-edit")) {
+    console.log("Clicou em editar tarefa");
+  }
+
+  if (targetEl.classList.contains("to-do-remove")) {
+    console.log("Clicou em remover tarefa!");
+  }
+});
