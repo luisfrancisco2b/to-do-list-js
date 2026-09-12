@@ -162,3 +162,11 @@ select {
   font-style: italic;
   color: #fff;
 }
+
+/* Mobile Responsiveness */
+
+/* @media (max-width: 768px){
+  .to-do-container{
+
+  }
+} */

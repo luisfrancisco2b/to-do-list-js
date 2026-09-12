@@ -60,19 +60,26 @@ toDoForm.addEventListener("submit", (e) => {
   }
 });
 
+// Event delegation
+// Hanlde clicks on tasks aciton buttons (finish, edit and remove) using
+// event delegation, since the elements are create dynamically
 document.addEventListener("click", (e) => {
   const targetEl = e.target;
+
+  // Finds the closest parent ""div" (the task containe) from the clicked element
   const parentEl = targetEl.closest("div");
 
+  // Toggles the "done" state when the finish button is clicked
   if (targetEl.classList.contains("to-do-finish")) {
     parentEl.classList.toggle("done");
   }
 
+  // Removes the task from the DOM when the remove button is clicked
   if (targetEl.classList.contains("to-do-remove")) {
     parentEl.remove();
   }
 
   if (targetEl.classList.contains("to-do-edit")) {
-    parentEl.classList.add("");
+    console.log("Editou!");
   }
 });
