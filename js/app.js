@@ -47,6 +47,13 @@ const saveData = (text) => {
   toDoInput.focus();
 };
 
+const toggleForms = () => {
+  editForm.classList.toggle("hide");
+  toDoList.classList.toggle("hide");
+  toDoForm.classList.toggle("hide");
+  console.log("Teste!");
+};
+
 // Events
 
 // Handles the form submission to add a new task
@@ -80,6 +87,6 @@ document.addEventListener("click", (e) => {
   }
 
   if (targetEl.classList.contains("to-do-edit")) {
-    console.log("Editou!");
+    toggleForms();
   }
 });
