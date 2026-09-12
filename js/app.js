@@ -65,14 +65,14 @@ document.addEventListener("click", (e) => {
   const parentEl = targetEl.closest("div");
 
   if (targetEl.classList.contains("to-do-finish")) {
-    console.log("Clicou em finalizar tarefa!");
-  }
-
-  if (targetEl.classList.contains("to-do-edit")) {
-    console.log("Clicou em editar tarefa");
+    parentEl.classList.toggle("done");
   }
 
   if (targetEl.classList.contains("to-do-remove")) {
-    console.log("Clicou em remover tarefa!");
+    parentEl.remove();
+  }
+
+  if (targetEl.classList.contains("to-do-edit")) {
+    parentEl.classList.add("");
   }
 });
