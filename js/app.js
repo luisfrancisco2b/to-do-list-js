@@ -9,6 +9,8 @@ const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 
 const toDoList = document.querySelector("#to-do-list");
 
+let oldInputValue;
+
 // Functions
 
 // Creates and renders a new task element based on the given text
@@ -51,7 +53,18 @@ const toggleForms = () => {
   editForm.classList.toggle("hide");
   toDoList.classList.toggle("hide");
   toDoForm.classList.toggle("hide");
-  console.log("Teste!");
+};
+
+const updateTodo = (text) => {
+  const todos = document.querySelectorAll(".to-do");
+
+  todos.forEach((todo) => {
+    let todoTitle = todo.querySelector("h3");
+
+    if (todoTitle.innerText === oldInputValue) {
+      todoTitle.innerText = text;
+    }
+  });
 };
 
 // Events
@@ -76,6 +89,11 @@ document.addEventListener("click", (e) => {
   // Finds the closest parent ""div" (the task containe) from the clicked element
   const parentEl = targetEl.closest("div");
 
+  let toDoTitle;
+
+  if (parentEl && parentEl.querySelector("h3")) {
+    toDoTitle = parentEl.querySelector("h3").innerText;
+  }
   // Toggles the "done" state when the finish button is clicked
   if (targetEl.classList.contains("to-do-finish")) {
     parentEl.classList.toggle("done");
@@ -88,5 +106,26 @@ document.addEventListener("click", (e) => {
 
   if (targetEl.classList.contains("to-do-edit")) {
     toggleForms();
+
+    editInput.value = toDoTitle;
+    oldInputValue = toDoTitle;
   }
+});
+
+cancelEditBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  toggleForms();
+});
+
+editForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const editInputValue = editInput.value;
+
+  if (editInputValue) {
+    updateTodo(editInputValue);
+  }
+
+  toggleForms();
 });
