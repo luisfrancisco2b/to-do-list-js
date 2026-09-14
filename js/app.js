@@ -9,6 +9,7 @@ const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 
 const toDoList = document.querySelector("#to-do-list");
 
+// Stores the original title of the task being edited, used to find and updated it later
 let oldInputValue;
 
 // Functions
@@ -49,12 +50,15 @@ const saveData = (text) => {
   toDoInput.focus();
 };
 
+// Toggles between the normal view (task list + add form)
+// and the edit view
 const toggleForms = () => {
   editForm.classList.toggle("hide");
   toDoList.classList.toggle("hide");
   toDoForm.classList.toggle("hide");
 };
 
+// Finds the task whose title matches the old value and updates it with the new text
 const updateTodo = (text) => {
   const todos = document.querySelectorAll(".to-do");
 
@@ -104,6 +108,9 @@ document.addEventListener("click", (e) => {
     parentEl.remove();
   }
 
+  // Opens the edit form and fills it with the clicked task's data
+  // Kept inside this "if" so it only runs when the edit button itself is clicked,
+  // not on every click that happens inside the edit form afterwards
   if (targetEl.classList.contains("to-do-edit")) {
     toggleForms();
 
@@ -112,12 +119,14 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// Handles the cancel button, closing the edit form without saving changes
 cancelEditBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   toggleForms();
 });
 
+// Handles the edit form submission, updating the task and closing the edit view
 editForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
