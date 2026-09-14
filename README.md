@@ -11,14 +11,15 @@ An advanced to-do list application built from scratch using **HTML5**, **CSS3**,
 - ✅ Font Awesome icons integrated via CDN
 - 🚧 JavaScript logic in development
 
-## Planned Features
+## Features
 
-- Add new tasks through a form
-- Mark tasks as done / not done
-- Edit existing tasks inline
-- Remove tasks
-- Search tasks by keyword
-- Filter tasks by status (all / done / to-do)
+- ✅ Add new tasks through a form
+- ✅ Mark tasks as done / not done
+- ✅ Edit existing tasks inline
+- ✅ Remove tasks
+- 🚧 Search tasks by keyword
+- 🚧 Filter tasks by status (all / done / to-do)
+- 🚧 Persist tasks using localStorage
 
 ## Tech Stack
 
