@@ -9,6 +9,10 @@ const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 
 const toDoList = document.querySelector("#to-do-list");
 
+const searchInput = document.querySelector("#search-input");
+const ereaseBtn = document.querySelector("#erase-button");
+const filter = document.querySelector("#filter-select");
+
 // Stores the original title of the task being edited, used to find and updated it later
 let oldInputValue;
 
@@ -137,4 +141,11 @@ editForm.addEventListener("submit", (e) => {
   }
 
   toggleForms();
+});
+
+// Search event
+searchInput.addEventListener("keyup", (e) => {
+  const search = e.target.value;
+
+  getSearchTodos(search);
 });
