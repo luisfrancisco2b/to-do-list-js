@@ -75,7 +75,7 @@ const updateTodo = (text) => {
   });
 };
 
-// Search function
+// Filters the visible tasks based on the search text, matching against each task's title
 const getSearchTodos = (search) => {
   const todos = document.querySelectorAll(".to-do");
 
@@ -84,6 +84,7 @@ const getSearchTodos = (search) => {
 
     const normalizedSearch = search.toLowerCase();
 
+    // Reset visiblity before checking, otherwise previously hidden tasks would stay hidden
     todo.style.display = "flex";
 
     if (!todoTitle.includes(normalizedSearch)) {
@@ -161,12 +162,16 @@ editForm.addEventListener("submit", (e) => {
 });
 
 // Search event
+
+// Filters the task list in real time as the user types
 searchInput.addEventListener("keyup", (e) => {
   const search = e.target.value;
 
   getSearchTodos(search);
 });
 
+// Clears the search field and manually trigger "keyup" to make all tasks
+// visible again, since changing .value via code doesn't fire the event on its own
 eraseBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
