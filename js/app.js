@@ -10,7 +10,7 @@ const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 const toDoList = document.querySelector("#to-do-list");
 
 const searchInput = document.querySelector("#search-input");
-const ereaseBtn = document.querySelector("#erase-button");
+const eraseBtn = document.querySelector("#erase-button");
 const filter = document.querySelector("#filter-select");
 
 // Stores the original title of the task being edited, used to find and updated it later
@@ -71,6 +71,23 @@ const updateTodo = (text) => {
 
     if (todoTitle.innerText === oldInputValue) {
       todoTitle.innerText = text;
+    }
+  });
+};
+
+// Search function
+const getSearchTodos = (search) => {
+  const todos = document.querySelectorAll(".to-do");
+
+  todos.forEach((todo) => {
+    let todoTitle = todo.querySelector("h3").innerText.toLowerCase();
+
+    const normalizedSearch = search.toLowerCase();
+
+    todo.style.display = "flex";
+
+    if (!todoTitle.includes(normalizedSearch)) {
+      todo.style.display = "none";
     }
   });
 };
@@ -148,4 +165,12 @@ searchInput.addEventListener("keyup", (e) => {
   const search = e.target.value;
 
   getSearchTodos(search);
+});
+
+eraseBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  searchInput.value = "";
+
+  searchInput.dispatchEvent(new Event("keyup"));
 });
