@@ -51,6 +51,10 @@ const saveTodo = (text, done = 0, save = 1) => {
     toDo.classList.add("done");
   }
 
+  if (save) {
+    saveTodosLocalStorage({ text, done });
+  }
+
   // Append the new task to the visible list
   toDoList.appendChild(toDo);
 
@@ -221,7 +225,6 @@ filterBtn.addEventListener("change", (e) => {
 });
 
 // Local Storage
-
 const getTodosLocalStorage = () => {
   const todos = JSON.parse(localStorage.getItem("todos")) || [];
 
@@ -233,5 +236,5 @@ const saveTodosLocalStorage = (todo) => {
 
   todos.push(todo);
 
-  localStorage.setItem("todos", JSON.stringif(todos));
+  localStorage.setItem("todos", JSON.stringify(todos));
 };
