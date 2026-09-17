@@ -19,7 +19,7 @@ let oldInputValue;
 // Functions
 
 // Creates and renders a new task element based on the given text
-const saveData = (text) => {
+const saveTodo = (text, done = 0, save = 1) => {
   const toDo = document.createElement("div");
   toDo.classList.add("to-do");
 
@@ -45,6 +45,11 @@ const saveData = (text) => {
   removeBtn.classList.add("to-do-remove");
   removeBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
   toDo.appendChild(removeBtn);
+
+  // Utilizando dados da localStorage
+  if (done) {
+    toDo.classList.add("done");
+  }
 
   // Append the new task to the visible list
   toDoList.appendChild(toDo);
@@ -131,7 +136,7 @@ toDoForm.addEventListener("submit", (e) => {
   const toDoInputValue = toDoInput.value;
 
   if (toDoInputValue.trim()) {
-    saveData(toDoInputValue);
+    saveTodo(toDoInputValue);
   }
 });
 
@@ -214,3 +219,19 @@ filterBtn.addEventListener("change", (e) => {
 
   filterTodos(filterValue);
 });
+
+// Local Storage
+
+const getTodosLocalStorage = () => {
+  const todos = JSON.parse(localStorage.getItem("todos")) || [];
+
+  return todos;
+};
+
+const saveTodosLocalStorage = (todo) => {
+  const todos = getTodosLocalStorage();
+
+  todos.push(todo);
+
+  localStorage.setItem("todos", JSON.stringif(todos));
+};
