@@ -171,6 +171,8 @@ document.addEventListener("click", (e) => {
   // Removes the task from the DOM when the remove button is clicked
   if (targetEl.classList.contains("to-do-remove")) {
     parentEl.remove();
+
+    removeTodoLocalStorage(toDoTitle);
   }
 
   // Opens the edit form and fills it with the clicked task's data
@@ -239,6 +241,7 @@ const getTodosLocalStorage = () => {
   return todos;
 };
 
+// Load todos
 const loadTodos = () => {
   const todos = getTodosLocalStorage();
 
@@ -254,6 +257,15 @@ const saveTodosLocalStorage = (todo) => {
   todos.push(todo);
 
   localStorage.setItem("todos", JSON.stringify(todos));
+};
+
+// Remove todos
+const removeTodoLocalStorage = (todoText) => {
+  const todos = getTodosLocalStorage();
+
+  const filteredTodos = todos.filter((todo) => todo.text !== todoText);
+
+  localStorage.setItem("todos", JSON.stringify(filteredTodos));
 };
 
 loadTodos();
