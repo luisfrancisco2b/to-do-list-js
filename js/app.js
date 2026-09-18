@@ -102,14 +102,17 @@ const getSearchTodos = (search) => {
   });
 };
 
+// Filters the visible tasks based on the selected option (all, done and todo)
 const filterTodos = (filterValue) => {
   const todos = document.querySelectorAll(".to-do");
 
+  // Show every tasks, regardless of status
   switch (filterValue) {
     case "all":
       todos.forEach((todo) => (todo.style.display = "flex"));
       break;
 
+    // Show only the tasks marked as done
     case "done":
       todos.forEach((todo) =>
         todo.classList.contains("done")
@@ -118,6 +121,7 @@ const filterTodos = (filterValue) => {
       );
       break;
 
+    // Show only the tasks that are still pending
     case "to-do":
       todos.forEach((todo) =>
         !todo.classList.contains("done")
@@ -126,6 +130,7 @@ const filterTodos = (filterValue) => {
       );
       break;
 
+      // Fallback in case filterValure doesn't match any known option
     default:
       break;
   }
@@ -218,6 +223,7 @@ eraseBtn.addEventListener("click", (e) => {
   searchInput.dispatchEvent(new Event("keyup"));
 });
 
+// Re-filters the tasks list whenever the selected option changes
 filterBtn.addEventListener("change", (e) => {
   const filterValue = e.target.value;
 
