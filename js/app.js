@@ -231,12 +231,15 @@ filterBtn.addEventListener("change", (e) => {
 });
 
 // Local Storage
+
+// Gets the saved tasks from localStorage, or an empty array if none exist yet
 const getTodosLocalStorage = () => {
   const todos = JSON.parse(localStorage.getItem("todos")) || [];
 
   return todos;
 };
 
+// Adds a new task to the saved list and updates the localStorage
 const saveTodosLocalStorage = (todo) => {
   const todos = getTodosLocalStorage();
 
