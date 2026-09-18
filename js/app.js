@@ -130,7 +130,7 @@ const filterTodos = (filterValue) => {
       );
       break;
 
-      // Fallback in case filterValure doesn't match any known option
+    // Fallback in case filterValure doesn't match any known option
     default:
       break;
   }
@@ -239,6 +239,14 @@ const getTodosLocalStorage = () => {
   return todos;
 };
 
+const loadTodos = () => {
+  const todos = getTodosLocalStorage();
+
+  todos.forEach((todo) => {
+    saveTodo(todo.text, todo.done, 0);
+  });
+};
+
 // Adds a new task to the saved list and updates the localStorage
 const saveTodosLocalStorage = (todo) => {
   const todos = getTodosLocalStorage();
@@ -247,3 +255,5 @@ const saveTodosLocalStorage = (todo) => {
 
   localStorage.setItem("todos", JSON.stringify(todos));
 };
+
+loadTodos();
