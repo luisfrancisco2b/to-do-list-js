@@ -172,6 +172,7 @@ document.addEventListener("click", (e) => {
   if (targetEl.classList.contains("to-do-remove")) {
     parentEl.remove();
 
+    // Also removes it from localStorage to keep data in sync
     removeTodoLocalStorage(toDoTitle);
   }
 
@@ -241,15 +242,6 @@ const getTodosLocalStorage = () => {
   return todos;
 };
 
-// Load todos
-const loadTodos = () => {
-  const todos = getTodosLocalStorage();
-
-  todos.forEach((todo) => {
-    saveTodo(todo.text, todo.done, 0);
-  });
-};
-
 // Adds a new task to the saved list and updates the localStorage
 const saveTodosLocalStorage = (todo) => {
   const todos = getTodosLocalStorage();
@@ -259,7 +251,21 @@ const saveTodosLocalStorage = (todo) => {
   localStorage.setItem("todos", JSON.stringify(todos));
 };
 
+// Load todos
+
+// Recreates each saved task on the screen when the page loads,
+// without saving them again (save = 0 avoids duplication saving localStorage data)
+const loadTodos = () => {
+  const todos = getTodosLocalStorage();
+
+  todos.forEach((todo) => {
+    saveTodo(todo.text, todo.done, 0);
+  });
+};
+
 // Remove todos
+
+// Removes a task from localStorage by filtering out the one matching the given text
 const removeTodoLocalStorage = (todoText) => {
   const todos = getTodosLocalStorage();
 
@@ -268,4 +274,5 @@ const removeTodoLocalStorage = (todoText) => {
   localStorage.setItem("todos", JSON.stringify(filteredTodos));
 };
 
+// Runs on page load, rendering any tasks previously saved in localStorage 
 loadTodos();
