@@ -278,6 +278,7 @@ const removeTodoLocalStorage = (todoText) => {
   localStorage.setItem("todos", JSON.stringify(filteredTodos));
 };
 
+// Updates a task's done status in localStorage, keeping it in sync with the screen
 const updateTodoStatusLocalStorage = (todoText) => {
   const todos = getTodosLocalStorage();
 
@@ -288,6 +289,7 @@ const updateTodoStatusLocalStorage = (todoText) => {
   localStorage.setItem("todos", JSON.stringify(todos));
 };
 
+// Updates a task's text in localStorage after it's edited
 const updateTodoLocalStorage = (todoOldText, todoNewText) => {
   const todos = getTodosLocalStorage();
 
