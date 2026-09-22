@@ -81,7 +81,7 @@ const updateTodo = (text) => {
     if (todoTitle.innerText === oldInputValue) {
       todoTitle.innerText = text;
 
-      upadteTodoLocalStorage(oldInputValue, text);
+      updateTodoLocalStorage(oldInputValue, text);
     }
   });
 };
@@ -281,17 +281,17 @@ const removeTodoLocalStorage = (todoText) => {
 const updateTodoStatusLocalStorage = (todoText) => {
   const todos = getTodosLocalStorage();
 
-  todos.map((todo) =>
+  todos.forEach((todo) =>
     todo.text === todoText ? (todo.done = !todo.done) : null,
   );
 
   localStorage.setItem("todos", JSON.stringify(todos));
 };
 
-const upadteTodoLocalStorage = (todoOldText, todoNewText) => {
+const updateTodoLocalStorage = (todoOldText, todoNewText) => {
   const todos = getTodosLocalStorage();
 
-  todos.map((todo) =>
+  todos.forEach((todo) =>
     todo.text === todoOldText ? (todo.text = todoNewText) : null,
   );
 
