@@ -52,7 +52,7 @@ git clone https://github.com/luisfrancisco2b/to-do-list-js
 ### 2. Navigate to the project folder
 
 ```bash
-cd qr-code-generator
+cd to-do-list-js
 ```
 
 ### 3. 🚀 Running the Project
