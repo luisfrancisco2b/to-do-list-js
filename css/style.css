@@ -169,8 +169,8 @@ select {
 
 /* Mobile Responsiveness */
 
-/* @media (max-width: 768px){
-  .to-do-container{
-
+@media (max-width: 767px) {
+  .to-do-container {
+    width: 300px;
   }
-} */
+}
