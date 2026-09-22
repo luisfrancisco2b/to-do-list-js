@@ -46,7 +46,7 @@ An advanced to-do list application built from scratch using **HTML5**, **CSS3**,
 ### 1. Clone this repository:
 
 ```bash
-git clone https://github.com/luisfrancisco2b/qr-code-generator
+git clone https://github.com/luisfrancisco2b/to-do-list-js
 ```
 
 ### 2. Navigate to the project folder
