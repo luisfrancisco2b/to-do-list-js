@@ -80,6 +80,8 @@ const updateTodo = (text) => {
 
     if (todoTitle.innerText === oldInputValue) {
       todoTitle.innerText = text;
+
+      upadteTodoLocalStorage(oldInputValue, text);
     }
   });
 };
@@ -281,6 +283,16 @@ const updateTodoStatusLocalStorage = (todoText) => {
 
   todos.map((todo) =>
     todo.text === todoText ? (todo.done = !todo.done) : null,
+  );
+
+  localStorage.setItem("todos", JSON.stringify(todos));
+};
+
+const upadteTodoLocalStorage = (todoOldText, todoNewText) => {
+  const todos = getTodosLocalStorage();
+
+  todos.map((todo) =>
+    todo.text === todoOldText ? (todo.text = todoNewText) : null,
   );
 
   localStorage.setItem("todos", JSON.stringify(todos));
