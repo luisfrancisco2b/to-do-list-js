@@ -166,6 +166,8 @@ document.addEventListener("click", (e) => {
   // Toggles the "done" state when the finish button is clicked
   if (targetEl.classList.contains("to-do-finish")) {
     parentEl.classList.toggle("done");
+
+    updateTodoStatusLocalStorage(toDoTitle);
   }
 
   // Removes the task from the DOM when the remove button is clicked
@@ -274,5 +276,15 @@ const removeTodoLocalStorage = (todoText) => {
   localStorage.setItem("todos", JSON.stringify(filteredTodos));
 };
 
-// Runs on page load, rendering any tasks previously saved in localStorage 
+const updateTodoStatusLocalStorage = (todoText) => {
+  const todos = getTodosLocalStorage();
+
+  todos.map((todo) =>
+    todo.text === todoText ? (todo.done = !todo.done) : null,
+  );
+
+  localStorage.setItem("todos", JSON.stringify(todos));
+};
+
+// Runs on page load, rendering any tasks previously saved in localStorage
 loadTodos();
