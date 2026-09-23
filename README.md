@@ -5,10 +5,10 @@ An advanced to-do list application built from scratch using **HTML5**, **CSS3**,
 ## Preview
 
 ### Desktop
-![Desktop preview](./img/desktop-preview.png)
-
-### Mobile
-![Mobile preview](./img/mobile-preview.png)
+<p align="center">
+  <img src="./img/desktop-preview.png" alt="Desktop Preview" width="65%">
+  <img src="./img/mobile-preview.png" alt="Mobile Preview" width="28%" style="margin-left: 2%;">
+</p>
 
 ## Features
 
