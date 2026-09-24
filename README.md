@@ -1,39 +1,41 @@
-# To-Do List (Vanilla JavaScript)
+# 📝 To-Do List (Vanilla JavaScript)
 
 An advanced to-do list application built from scratch using **HTML5**, **CSS3**, and **Vanilla JavaScript** (no frameworks or libraries, aside from Font Awesome for icons).
 
-## Preview
+---
 
-### Desktop
-<p align="center">
-  <img src="./img/desktop-preview.png" alt="Desktop Preview" width="65%">
-  <img src="./img/mobile-preview.png" alt="Mobile Preview" width="28%" style="margin-left: 2%;">
-</p>
+## 📸 Preview
 
-## Features
+|                    Desktop View                     |                    Mobile View                     |
+| :---------------------------------------------------: | :---------------------------------------------------: |
+| ![Desktop Preview](./img/desktop-preview.png) | ![Mobile Preview](./img/mobile-preview.png) |
 
-- ✅ Add new tasks through a form
-- ✅ Mark tasks as done / not done
-- ✅ Edit existing tasks inline
-- ✅ Remove tasks
-- ✅ Search tasks by keyword, in real time
-- ✅ Filter tasks by status (all / done / to-do)
-- ✅ Persist tasks using localStorage (data is kept even after closing the browser)
-- ✅ Fully responsive layout (desktop and mobile)
+---
 
-## Tech Stack
+## 🚀 Features
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- Font Awesome (icons)
+- **Task Management:** Add, edit, mark as done, and remove tasks.
+- **Real-Time Search:** Filters the task list instantly as you type, matching against task titles.
+- **Status Filter:** View all, completed, or pending tasks through a dropdown selector.
+- **Data Persistence:** Tasks are saved to `localStorage`, so nothing is lost on page reload or when the browser is closed.
+- **Dynamic Rendering:** Tasks are created and updated in the DOM using event delegation, since elements are generated dynamically.
+- **Fully Responsive Layout:** Works seamlessly across desktop and mobile devices.
 
-## How It Works
+---
 
-- Tasks are created dynamically with JavaScript and rendered on the screen using DOM manipulation.
-- Task actions (finish, edit, remove) are handled through event delegation, since tasks are created dynamically.
-- All tasks are saved to the browser's `localStorage`, so nothing is lost on page reload.
-- The search field filters tasks in real time as you type, and the filter dropdown lets you view all, completed, or pending tasks.
+## 🛠️ Tech Stack
+
+- **HTML5:** Semantic markup structure.
+- **CSS3:** Custom styling, responsive layout and background handling.
+- **JavaScript (ES6+):** DOM manipulation, event delegation, and `localStorage` API for data persistence.
+- **Font Awesome:** Icons for task actions.
+
+---
+
+## 📌 Future Improvements
+- [ ] Rebuild the application using **React.js**.
+
+---
 
 ## Status
 
