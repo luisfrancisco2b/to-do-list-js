@@ -8,7 +8,7 @@ An advanced to-do list application built from scratch using **HTML5**, **CSS3**,
 
 |                 Desktop View                  |                 Mobile View                 |
 | :-------------------------------------------: | :-----------------------------------------: |
-| ![Desktop Preview](./img/preview-1.png) | ![Mobile Preview](./img/preview-2.png) |
+| ![Desktop Preview](./img/desktop-preview.png) | ![Mobile Preview](./img/mobile-preview.png) |
 
 ---
 
