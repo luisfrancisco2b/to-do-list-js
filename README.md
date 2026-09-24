@@ -6,9 +6,9 @@ An advanced to-do list application built from scratch using **HTML5**, **CSS3**,
 
 ## 📸 Preview
 
-|                    Desktop View                     |                    Mobile View                     |
-| :---------------------------------------------------: | :---------------------------------------------------: |
-| ![Desktop Preview](./img/desktop-preview.png) | ![Mobile Preview](./img/mobile-preview.png) |
+|                 Desktop View                  |                 Mobile View                 |
+| :-------------------------------------------: | :-----------------------------------------: |
+| ![Desktop Preview](./img/preview-1.png) | ![Mobile Preview](./img/preview-2.png) |
 
 ---
 
@@ -33,6 +33,7 @@ An advanced to-do list application built from scratch using **HTML5**, **CSS3**,
 ---
 
 ## 📌 Future Improvements
+
 - [ ] Rebuild the application using **React.js**.
 
 ---
@@ -59,11 +60,11 @@ cd to-do-list-js
 
 ### 3. 🚀 Running the Project
 
-```bash
 Since this is a front-end application, you can run it directly.
 
 Open the `index.html` file in your browser, or run it using an extension like **Live Server** in VS Code:
 
+```
 http://127.0.0.1:5500/index.html
 ```
 
